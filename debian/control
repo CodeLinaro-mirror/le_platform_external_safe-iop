@@ -1,0 +1,25 @@
+Source: safe-iop
+Section: libs
+Priority: optional
+Maintainer: Haoran Lu <halu@qti.qualcomm.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ pkg-config,
+ dh-autoreconf
+Standards-Version: 4.6.2
+Homepage: https://android.googlesource.com/platform/external/safe-iop
+Rules-Requires-Root: no
+
+Package: safe-iop
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Safe integer operations library (runtime)
+ C library & headers for performing and checking safe integer operations.
+
+Package: safe-iop-dev
+Architecture: any
+Multi-Arch: same
+Depends: safe-iop (= ${binary:Version}), ${misc:Depends}
+Description: Development files for safe-iop
+ Headers, unversioned linker symlink and pkg-config file.
